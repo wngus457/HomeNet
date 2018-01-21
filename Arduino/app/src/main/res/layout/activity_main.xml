@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="homenet.arduino.MainActivity">
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/line"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/contentmain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <Button
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:text=""
+                        android:background="@drawable/bluetoothicon"
+                        android:id="@+id/btn_bluetooth"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/contentlamp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="150dp">
+                        <ToggleButton
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:textOn=""
+                            android:textOff=""
+                            android:background="@drawable/bathoff"
+                            android:id="@+id/btnled1"/>
+                        <ToggleButton
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:textOn=""
+                            android:textOff=""
+                            android:background="@drawable/livingoff"
+                            android:id="@+id/btnled2"/>
+                    </LinearLayout>
+
+                    <ToggleButton
+                        android:layout_width="180dp"
+                        android:layout_height="150dp"
+                        android:textOn=""
+                        android:textOff=""
+                        android:background="@drawable/kitchenoff"
+                        android:id="@+id/btnled3"/>
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </TabHost>
+
+
+
+</LinearLayout>
